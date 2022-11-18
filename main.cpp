@@ -2,20 +2,15 @@
 using namespace std;
 
 int find_largest_element(int arr[],int n){
-       int store;
 
-       for(int i =0;i<n;i++){
-             if(arr[0]<arr[i])
-             {
-                 arr[0]=arr[i];
-             }
-             else{
-                store =  0 + arr[0];
-             }
+        int max = arr[0];
+            for (int i = 1; i < n; i++)
+                if (arr[i] > max)
+                    max = arr[i];
+  
+    return max;
 
-        }
-
-       return store;
+    
 }
 
 int main()
@@ -31,5 +26,5 @@ int main()
            cin>>arr[i];
     }
     cout<<"largest:"<<find_largest_element(arr,n);
-    return 0;
+   
 }
